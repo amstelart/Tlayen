@@ -1,0 +1,193 @@
+// В этом файле должны быть стили для БЭМ-блока accordion-group, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.accordion-group {
+
+  $block-name:                &; // #{$block-name}__element
+
+}
+
+.accordion-group {
+  padding: 1rem 0;
+}
+
+.accordion-group__accordion {
+  padding: 0 37px;
+  margin: 0 0 20px 0;
+  background: #fff;
+  border-radius: 10px;
+
+  @media (max-width: ($screen-lg - 1)) {
+    padding: 0 25px 60px 25px;
+    position: relative;
+  }
+}
+
+.accordion-group__accordion-heading {
+  margin: 0;
+}
+
+.accordion-group__accordion-btn {
+  background: transparent;
+  border: none;
+  display: block;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 34px;
+  padding: 25px 45% 25px 0;
+  color: #000;
+  text-align: left;
+  width: 100%;
+  position: relative;
+  cursor: pointer;
+
+  @media (max-width: ($screen-lg - 1)) {
+    font-size: 20px;
+    line-height: 30px;
+    padding: 25px 0;
+    position: static;
+  }
+}
+
+.accordion-group__accordion-icon {
+  width: 48px;
+  height: 48px;
+  background: $color-main;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  cursor: pointer;
+
+  @media (max-width: ($screen-lg - 1)) {
+    transform: inherit;
+    top: inherit;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  &:after {
+    content: "";
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    background-image: url(../img/btn-arrow-icon.svg);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform $transition-time;
+  }
+}
+
+.accordion-group__accordion-btn:focus {
+
+}
+
+.accordion-group__accordion-panel {
+  border-top: 1px solid #D3D3D3;
+  padding: 20px 30% 20px 0;
+
+  @media (max-width: ($screen-lg - 1)) {
+    padding: 20px 0;
+  }
+}
+
+.accordion-group__accordion-content {
+  color: #737373;
+  line-height: 26px;
+}
+
+.accordion-group__accordion-btn_expanded {
+
+  .accordion-group__accordion-icon {
+    &:after {
+      transform: translate(-50%, -50%) rotate(-180deg);
+    }
+  }
+}
+
+.accordion-section {
+
+  &__accordion {
+    border-top: 1px solid #D3D3D3;
+  }
+
+  &__accordion-btn {
+    background: transparent;
+    border: none;
+    display: block;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 34px;
+    letter-spacing: -0.02em;
+    color: #151520;
+    padding: 25px 45% 25px 0;
+    text-align: left;
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+
+    @media (max-width: ($screen-lg - 1)) {
+      font-size: 30px;
+      line-height: 34px;
+      padding: 25px 15% 25px 0;
+    }
+  }
+
+  &__accordion-icon {
+    width: 48px;
+    height: 48px;
+    background: $color-main;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    right: 37px;
+    transform: translateY(-50%);
+    cursor: pointer;
+
+    @media (max-width: ($screen-lg - 1)) {
+      right: 0;
+    }
+
+    &:after {
+      content: "";
+      width: 24px;
+      height: 24px;
+      position: absolute;
+      background-image: url(../img/btn-arrow-icon.svg);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: transform $transition-time;
+    }
+  }
+
+  &__accordion-btn_expanded {
+
+    .accordion-section__accordion-icon {
+      &:after {
+        transform: translate(-50%, -50%) rotate(-180deg);
+      }
+    }
+  }
+
+  &--sm {
+    .accordion-section__accordion {
+      border: none;
+    }
+
+    .accordion-section__accordion-btn {
+      font-family: $font-family;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 20px;
+      letter-spacing: -0.05em;
+      background: #fff;
+      border-radius: 20px;
+      padding: 26px 30px;
+    }
+  }
+}
