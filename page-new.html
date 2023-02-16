@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>New website</title>
+  <meta name="description" content>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <link href="https://fonts.cdnfonts.com/css/satoshi" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet" media="screen">
+  <script>
+    // Маркер работающего javascript
+    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+    document.addEventListener('DOMContentLoaded', function(){
+      if (window.isMobile !== undefined) {
+        // console.log(isMobile);
+        if(isMobile.any) {
+          var rootClasses = ' is-mobile';
+          for (key in isMobile) {
+            if(typeof isMobile[key] === 'boolean' && isMobile[key] && key !== 'any') rootClasses += ' is-mobile--'+key;
+            if(typeof isMobile[key] === 'object' && key !== 'other') {
+              for (type in isMobile[key]) {
+                if(isMobile[key][type]) rootClasses += ' is-mobile--'+key+'-'+type;
+              }
+            }
+          }
+          document.documentElement.className += rootClasses;
+        }
+      }
+      else {
+        console.log('Классы для мобильных не добавлены: в сборке отсутствует isMobile.js');
+      }
+    });
+  </script>
+<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+<link rel="manifest" href="/img/site.webmanifest">
+<link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#ffffff">
+<link rel="shortcut icon" href="/img/favicon.ico">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/img/mstile-144x144.png">
+<meta name="msapplication-config" content="/img/browserconfig.xml">
+<meta name="theme-color" content="#ffffff"></head>
+<body>
+  <div class="page__inner">
+    <div class="page__content">
+      <header class="page-header" role="banner">
+        <div class="container">
+          <div class="page-header__inner">
+            <a href="index.html" class="logo logo--header"><img src="img/logo.svg" alt></a>
+            <nav id="main-nav" class="main-nav" role="navigation">
+              <button id="main-nav-toggler" class="main-nav__toggler  burger"><span></span></button>
+              <ul class="main-nav__list">
+                <li class="main-nav__item main-nav__item--active">
+                  <a href="page-fix.html" class="main-nav__link">
+                    Fix my website
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="page-update.html" class="main-nav__link">
+                    Update my website
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="page-new.html" class="main-nav__link">
+                    New website
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <div class="intro-image">
+        <div class="container">
+          <div class="intro-image__row">
+            <div class="intro-image__left">
+              <h1 class="intro-image__title">New website</h1>
+              <p class="intro-image__caption">There are many variations of passages of Lorem Ipsum available,
+                but the majority have suffered alteration in some form, by injected
+                humour, or randomised words which don't look even slightly believable. </p>
+            </div>
+            <div class="intro-image__right">
+              <div class="intro-page-img">
+                <img src="img/intro-page-img.svg" alt>
+                <div class="intro-new-img">
+                  <img src="img/intro-new-img.png" alt>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <main role="main">
+        <section class="section section--step">
+          <div class="container">
+            <h3 class="text-center">Simple quick reliable 3 steps process</h3>
+            <div class="steps">
+              <div class="steps__item">
+                <div class="steps__card">
+                  <div class="steps__card-num"><svg class="icon"><use xlink:href="img/sprite-svg.svg#step-icon-01"/></svg></div>
+                  <div class="steps__card-title">Planing</div>
+                </div>
+              </div>
+              <div class="steps__item">
+                <div class="steps__card">
+                  <div class="steps__card-num"><svg class="icon"><use xlink:href="img/sprite-svg.svg#step-icon-02"/></svg></div>
+                  <div class="steps__card-title">Design and build</div>
+                </div>
+              </div>
+              <div class="steps__item">
+                <div class="steps__card">
+                  <div class="steps__card-num"><svg class="icon"><use xlink:href="img/sprite-svg.svg#step-icon-03"/></svg></div>
+                  <div class="steps__card-title">Go live</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section section--card-group">
+          <div class="container">
+            <div class="section__header">
+              <h3 class="text-center">We make any feature you requied</h3>
+              <p class="text-center">Here are few to discuss in our planing together</p>
+            </div>
+            <div class="card-group">
+              <div class="card-group__row">
+                <div class="card-group__item">
+                  <div class="card">
+                    <div class="card__header">
+                      <div class="card__title">Fix my issue</div>
+                      <div class="card__icon"><svg class="icon" width="36" height="36"><use xlink:href="img/sprite-svg.svg#card-icon-01"/></svg></div>
+                    </div>
+                    <div class="card__body">
+                      <p>It is a long established fact that a reader
+                        will be distracted by the readable content
+                        of a page when looking at its layout.</p>
+                    </div>
+                    <div class="card__footer">
+                      <a href="#" class="btn card__btn"><svg class="icon" width="30" height="30"><use xlink:href="img/sprite-svg.svg#btn-icon-more"/></svg></a>
+                      <a href="#" class="btn card__btn"><svg class="icon" width="34" height="33"><use xlink:href="img/sprite-svg.svg#btn-icon-star"/></svg></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-group__item">
+                  <div class="card">
+                    <div class="card__header">
+                      <div class="card__title">Fix my issue</div>
+                      <div class="card__icon"><svg class="icon" width="36" height="36"><use xlink:href="img/sprite-svg.svg#card-icon-02"/></svg></div>
+                    </div>
+                    <div class="card__body">
+                      <p>It is a long established fact that a reader
+                        will be distracted by the readable content
+                        of a page when looking at its layout.</p>
+                    </div>
+                    <div class="card__footer">
+                      <a href="#" class="btn card__btn"><svg class="icon" width="30" height="30"><use xlink:href="img/sprite-svg.svg#btn-icon-more"/></svg></a>
+                      <a href="#" class="btn card__btn"><svg class="icon" width="34" height="33"><use xlink:href="img/sprite-svg.svg#btn-icon-star"/></svg></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-group__item">
+                  <div class="card">
+                    <div class="card__header">
+                      <div class="card__title">Fix my issue</div>
+                      <div class="card__icon"><svg class="icon" width="36" height="36"><use xlink:href="img/sprite-svg.svg#card-icon-03"/></svg></div>
+                    </div>
+                    <div class="card__body">
+                      <p>It is a long established fact that a reader
+                        will be distracted by the readable content
+                        of a page when looking at its layout.</p>
+                    </div>
+                    <div class="card__footer">
+                      <a href="#" class="btn card__btn"><svg class="icon" width="30" height="30"><use xlink:href="img/sprite-svg.svg#btn-icon-more"/></svg></a>
+                      <a href="#" class="btn card__btn"><svg class="icon" width="34" height="33"><use xlink:href="img/sprite-svg.svg#btn-icon-star"/></svg></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-group__item">
+                  <div class="card">
+                    <div class="card__header">
+                      <div class="card__title">Fix my issue</div>
+                      <div class="card__icon"><svg class="icon" width="36" height="36"><use xlink:href="img/sprite-svg.svg#card-icon-04"/></svg></div>
+                    </div>
+                    <div class="card__body">
+                      <p>It is a long established fact that a reader
+                        will be distracted by the readable content
+                        of a page when looking at its layout.</p>
+                    </div>
+                    <div class="card__footer">
+                      <a href="#" class="btn card__btn"><svg class="icon" width="30" height="30"><use xlink:href="img/sprite-svg.svg#btn-icon-more"/></svg></a>
+                      <a href="#" class="btn card__btn"><svg class="icon" width="34" height="33"><use xlink:href="img/sprite-svg.svg#btn-icon-star"/></svg></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-group__item">
+                  <div class="card">
+                    <div class="card__header">
+                      <div class="card__title">Fix my issue</div>
+                      <div class="card__icon"><svg class="icon" width="36" height="36"><use xlink:href="img/sprite-svg.svg#card-icon-05"/></svg></div>
+                    </div>
+                    <div class="card__body">
+                      <p>It is a long established fact that a reader
+                        will be distracted by the readable content
+                        of a page when looking at its layout.</p>
+                    </div>
+                    <div class="card__footer">
+                      <a href="#" class="btn card__btn"><svg class="icon" width="30" height="30"><use xlink:href="img/sprite-svg.svg#btn-icon-more"/></svg></a>
+                      <a href="#" class="btn card__btn"><svg class="icon" width="34" height="33"><use xlink:href="img/sprite-svg.svg#btn-icon-star"/></svg></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-group__item">
+                  <div class="card">
+                    <div class="card__header">
+                      <div class="card__title">Fix my issue</div>
+                      <div class="card__icon"><svg class="icon" width="36" height="36"><use xlink:href="img/sprite-svg.svg#card-icon-06"/></svg></div>
+                    </div>
+                    <div class="card__body">
+                      <p>It is a long established fact that a reader
+                        will be distracted by the readable content
+                        of a page when looking at its layout.</p>
+                    </div>
+                    <div class="card__footer">
+                      <a href="#" class="btn card__btn"><svg class="icon" width="30" height="30"><use xlink:href="img/sprite-svg.svg#btn-icon-more"/></svg></a>
+                      <a href="#" class="btn card__btn"><svg class="icon" width="34" height="33"><use xlink:href="img/sprite-svg.svg#btn-icon-star"/></svg></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-group__item">
+                  <div class="card">
+                    <div class="card__header">
+                      <div class="card__title">Fix my issue</div>
+                      <div class="card__icon"><svg class="icon" width="36" height="36"><use xlink:href="img/sprite-svg.svg#card-icon-07"/></svg></div>
+                    </div>
+                    <div class="card__body">
+                      <p>It is a long established fact that a reader
+                        will be distracted by the readable content
+                        of a page when looking at its layout.</p>
+                    </div>
+                    <div class="card__footer">
+                      <a href="#" class="btn card__btn"><svg class="icon" width="30" height="30"><use xlink:href="img/sprite-svg.svg#btn-icon-more"/></svg></a>
+                      <a href="#" class="btn card__btn"><svg class="icon" width="34" height="33"><use xlink:href="img/sprite-svg.svg#btn-icon-star"/></svg></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-group__item">
+                  <div class="card">
+                    <div class="card__header">
+                      <div class="card__title">Fix my issue</div>
+                      <div class="card__icon"><svg class="icon" width="36" height="36"><use xlink:href="img/sprite-svg.svg#card-icon-08"/></svg></div>
+                    </div>
+                    <div class="card__body">
+                      <p>It is a long established fact that a reader
+                        will be distracted by the readable content
+                        of a page when looking at its layout.</p>
+                    </div>
+                    <div class="card__footer">
+                      <a href="#" class="btn card__btn"><svg class="icon" width="30" height="30"><use xlink:href="img/sprite-svg.svg#btn-icon-more"/></svg></a>
+                      <a href="#" class="btn card__btn"><svg class="icon" width="34" height="33"><use xlink:href="img/sprite-svg.svg#btn-icon-star"/></svg></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-group__item">
+                  <div class="card">
+                    <div class="card__header">
+                      <div class="card__title">Fix my issue</div>
+                      <div class="card__icon"><svg class="icon" width="36" height="36"><use xlink:href="img/sprite-svg.svg#card-icon-09"/></svg></div>
+                    </div>
+                    <div class="card__body">
+                      <p>It is a long established fact that a reader
+                        will be distracted by the readable content
+                        of a page when looking at its layout.</p>
+                    </div>
+                    <div class="card__footer">
+                      <a href="#" class="btn card__btn"><svg class="icon" width="30" height="30"><use xlink:href="img/sprite-svg.svg#btn-icon-more"/></svg></a>
+                      <a href="#" class="btn card__btn"><svg class="icon" width="34" height="33"><use xlink:href="img/sprite-svg.svg#btn-icon-star"/></svg></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-group__item">
+                  <div class="card">
+                    <div class="card__header">
+                      <div class="card__title">Fix my issue</div>
+                      <div class="card__icon"><svg class="icon" width="36" height="36"><use xlink:href="img/sprite-svg.svg#card-icon-10"/></svg></div>
+                    </div>
+                    <div class="card__body">
+                      <p>It is a long established fact that a reader
+                        will be distracted by the readable content
+                        of a page when looking at its layout.</p>
+                    </div>
+                    <div class="card__footer">
+                      <a href="#" class="btn card__btn"><svg class="icon" width="30" height="30"><use xlink:href="img/sprite-svg.svg#btn-icon-more"/></svg></a>
+                      <a href="#" class="btn card__btn"><svg class="icon" width="34" height="33"><use xlink:href="img/sprite-svg.svg#btn-icon-star"/></svg></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-group__item">
+                  <div class="card">
+                    <div class="card__header">
+                      <div class="card__title">Fix my issue</div>
+                      <div class="card__icon"><svg class="icon" width="36" height="36"><use xlink:href="img/sprite-svg.svg#card-icon-11"/></svg></div>
+                    </div>
+                    <div class="card__body">
+                      <p>It is a long established fact that a reader
+                        will be distracted by the readable content
+                        of a page when looking at its layout.</p>
+                    </div>
+                    <div class="card__footer">
+                      <a href="#" class="btn card__btn"><svg class="icon" width="30" height="30"><use xlink:href="img/sprite-svg.svg#btn-icon-more"/></svg></a>
+                      <a href="#" class="btn card__btn"><svg class="icon" width="34" height="33"><use xlink:href="img/sprite-svg.svg#btn-icon-star"/></svg></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-group__item">
+                  <div class="card">
+                    <div class="card__header">
+                      <div class="card__title">Fix my issue</div>
+                      <div class="card__icon"><svg class="icon" width="36" height="36"><use xlink:href="img/sprite-svg.svg#card-icon-12"/></svg></div>
+                    </div>
+                    <div class="card__body">
+                      <p>It is a long established fact that a reader
+                        will be distracted by the readable content
+                        of a page when looking at its layout.</p>
+                    </div>
+                    <div class="card__footer">
+                      <a href="#" class="btn card__btn"><svg class="icon" width="30" height="30"><use xlink:href="img/sprite-svg.svg#btn-icon-more"/></svg></a>
+                      <a href="#" class="btn card__btn"><svg class="icon" width="34" height="33"><use xlink:href="img/sprite-svg.svg#btn-icon-star"/></svg></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-group__item">
+                  <div class="card">
+                    <div class="card__header">
+                      <div class="card__title">Fix my issue</div>
+                      <div class="card__icon"><svg class="icon" width="36" height="36"><use xlink:href="img/sprite-svg.svg#card-icon-13"/></svg></div>
+                    </div>
+                    <div class="card__body">
+                      <p>It is a long established fact that a reader
+                        will be distracted by the readable content
+                        of a page when looking at its layout.</p>
+                    </div>
+                    <div class="card__footer">
+                      <a href="#" class="btn card__btn"><svg class="icon" width="30" height="30"><use xlink:href="img/sprite-svg.svg#btn-icon-more"/></svg></a>
+                      <a href="#" class="btn card__btn"><svg class="icon" width="34" height="33"><use xlink:href="img/sprite-svg.svg#btn-icon-star"/></svg></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-group__item">
+                  <a href="#" class="card card--add">
+                    <div class="card__icon"><svg class="icon" width="36" height="36"><use xlink:href="img/sprite-svg.svg#card-icon-add"/></svg></div>
+                    <div class="card__add-title">Add your fix</div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section">
+          <div class="container">
+            <form class="contact-preferences" action>
+              <h4 class="form-title-h2">Contact preferences</h4>
+              <div class="fields-social">
+                <div class="fields-social__row">
+                  <div class="fields-social__col">
+                    <label class="field-text field-text--icon">
+                      <span class="field-text__input-wrap">
+                        <div class="field-icon"><svg class="icon" width="30" height="30"><use xlink:href="img/sprite-svg.svg#field-icon-email"/></svg></div>
+                        <input class="field-text__input" type="text" placeholder="Enter your email" id name>
+                      </span>
+                    </label>
+                  </div>
+                  <div class="fields-social__col">
+                    <label class="field-text field-text--icon">
+                      <span class="field-text__input-wrap">
+                        <div class="field-icon instagram"><img src="img/field-icon-insta.png" alt class="icon"></div>
+                        <input class="field-text__input" type="text" placeholder="Enter your link" id name>
+                      </span>
+                    </label>
+                  </div>
+                  <div class="fields-social__col">
+                    <label class="field-text field-text--icon">
+                      <span class="field-text__input-wrap">
+                        <div class="field-icon hz"><img src="img/field-icon-hz.png" alt class="icon"></div>
+                        <input class="field-text__input" type="text" placeholder="Enter your link" id name>
+                      </span>
+                    </label>
+                  </div>
+                  <div class="fields-social__col">
+                    <label class="field-text field-text--icon">
+                      <span class="field-text__input-wrap">
+                        <div class="field-icon skype"><img src="img/field-icon-skype.png" alt class="icon"></div>
+                        <input class="field-text__input" type="text" placeholder="Enter your link" id name>
+                      </span>
+                    </label>
+                  </div>
+                  <div class="fields-social__col">
+                    <label class="field-text field-text--icon">
+                      <span class="field-text__input-wrap">
+                        <div class="field-icon"><img src="img/field-icon-fa.png" alt class="icon"></div>
+                        <input class="field-text__input" type="text" placeholder="Enter your link" id name>
+                      </span>
+                    </label>
+                  </div>
+                  <div class="fields-social__col">
+                    <label class="field-text field-text--icon">
+                      <span class="field-text__input-wrap">
+                        <div class="field-icon linkedin"><img src="img/field-icon-in.png" alt class="icon"></div>
+                        <input class="field-text__input" type="text" placeholder="Enter your link" id name>
+                      </span>
+                    </label>
+                  </div>
+                  <div class="fields-social__col">
+                    <label class="field-text field-text--icon">
+                      <span class="field-text__input-wrap">
+                        <div class="field-icon discord"><img src="img/field-icon-dis.png" alt class="icon"></div>
+                        <input class="field-text__input" type="text" placeholder="Enter your link" id name>
+                      </span>
+                    </label>
+                  </div>
+                  <div class="fields-social__col">
+                    <label class="field-text field-text--icon">
+                      <span class="field-text__input-wrap">
+                        <div class="field-icon telegram"><img src="img/field-icon-telegram.png" alt class="icon"></div>
+                        <input class="field-text__input" type="text" placeholder="Enter your link" id name>
+                      </span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="fields-contacts">
+                <div class="fields-contacts__row">
+                  <div class="fields-mobile__col">
+                    <label class="field-text field-text--icon">
+                      <span class="field-text__name">Mobile</span>
+                      <span class="field-text__input-wrap">
+                        <div class="field-icon"><svg class="icon" width="30" height="30"><use xlink:href="img/sprite-svg.svg#field-icon-phone"/></svg></div>
+                        <input class="field-text__input" type="text" placeholder="Enter mobile" id name>
+                      </span>
+                    </label>
+                  </div>
+                  <div class="fields-other__col">
+                    <label class="field-text field-text--icon">
+                      <span class="field-text__name">Other</span>
+                      <span class="field-text__input-wrap">
+                        <div class="field-icon"><svg class="icon" width="30" height="30"><use xlink:href="img/sprite-svg.svg#field-icon-contact"/></svg></div>
+                        <input class="field-text__input" type="text" placeholder="Add contact" id name>
+                      </span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="fields-actions">
+                <button class="btn btn--green" type="submit">Done</button>
+              </div>
+            </form>
+          </div>
+        </section>
+        <section class="section">
+          <div class="container">
+            <h3>Schedule update my website (development)</h3>
+            <div class="calendar">
+              <div class="calendar__row">
+                <div class="calendar__viev">
+                  <div id="calendar"></div>
+                </div>
+                <div class="calendar__fields">
+                  <div class="calendar-field">
+                    <div class="calendar-field__title">Choose time</div>
+                    <div class="calendar-field__row">
+                      <div class="calendar-field__col">
+                        <div class="calendar-field__item-wrap">
+                          <div class="calendar-field__item">
+                            <div class="calendar-field__item-title">Start with </div>
+                            <div class="calendar-field__item-name">00:00 AM</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="calendar-field__col">
+                        <div class="calendar-field__item-wrap">
+                          <div class="calendar-field__item">
+                            <div class="calendar-field__item-title">End with</div>
+                            <div class="calendar-field__item-name">00:00 AM</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="calendar-field">
+                    <div class="calendar-field__title">Avaible spots</div>
+                    <div class="calendar-field__item-wrap">
+                      <div class="calendar-field__item">
+                        <div class="calendar-field__item-title">Free spot</div>
+                        <div class="calendar-field__item-name">1 spot available in December</div>
+                      </div>
+                    </div>
+                    <div class="calendar-field__item-wrap calendar-field__item--bonus">
+                      <div class="calendar-field__bonus">$50 bonus</div>
+                      <div class="calendar-field__item">
+                        <div class="calendar-field__item-title">Free spot</div>
+                        <div class="calendar-field__item-name">2 spot available in January</div>
+                      </div>
+                      <div class="calendar-field__item">
+                        <div class="calendar-field__item-title">Free spot</div>
+                        <div class="calendar-field__item-name">5 spot available in February</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section">
+          <div class="container">
+            <h3>Schedule a requirements meeting</h3>
+            <div class="calendar">
+              <div class="calendar__row">
+                <div class="calendar__viev">
+                  <div id="calendar-2"></div>
+                </div>
+                <div class="calendar__fields">
+                  <div class="calendar-field">
+                    <div class="calendar-field__title">Choose time</div>
+                    <div class="calendar-field__row">
+                      <div class="calendar-field__col">
+                        <div class="calendar-field__item-wrap">
+                          <div class="calendar-field__item">
+                            <div class="calendar-field__item-title">Start with </div>
+                            <div class="calendar-field__item-name">00:00 AM</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="calendar-field__col">
+                        <div class="calendar-field__item-wrap">
+                          <div class="calendar-field__item">
+                            <div class="calendar-field__item-title">End with</div>
+                            <div class="calendar-field__item-name">00:00 AM</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="calendar-field">
+                    <div class="calendar-field__title">Fast time select</div>
+                    <div class="calendar-field__item-wrap calendar-field__item--fast-time">
+                      <div class="calendar-field__item">
+                        <div class="calendar-field__item-title">Start with</div>
+                        <div class="calendar-field__item-name">09:00 AM</div>
+                      </div>
+                      <div class="calendar-field__item">
+                        <div class="calendar-field__item-title">End with</div>
+                        <div class="calendar-field__item-name">10:00 AM</div>
+                      </div>
+                    </div>
+                    <div class="calendar-field__item-wrap calendar-field__item--fast-time">
+                      <div class="calendar-field__item">
+                        <div class="calendar-field__item-title">Start with</div>
+                        <div class="calendar-field__item-name">10:00 AM</div>
+                      </div>
+                      <div class="calendar-field__item">
+                        <div class="calendar-field__item-title">End with</div>
+                        <div class="calendar-field__item-name">11:00 AM</div>
+                      </div>
+                    </div>
+                    <div class="calendar-field__item-wrap calendar-field__item--fast-time">
+                      <div class="calendar-field__item">
+                        <div class="calendar-field__item-title">Start with</div>
+                        <div class="calendar-field__item-name">12:00 AM</div>
+                      </div>
+                      <div class="calendar-field__item">
+                        <div class="calendar-field__item-title">End with</div>
+                        <div class="calendar-field__item-name">01:00 PM</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section">
+          <div class="container">
+            <h3>Tell us the details now or leave it <br> till our planning meeting</h3>
+            <form class="requirements" action>
+              <h4 class="form-title-h2">Describe your requirements</h4>
+              <div class="fields-note">
+                <label class="field-text">
+                  <span class="field-text__input-wrap">
+                    <textarea class="field-text__input field-text__input--textarea" placeholder="Writte note..."></textarea>
+                  </span>
+                </label>
+              </div>
+              <div class="field-label-checkbox">
+                <div class="field-label-checkbox__input-wrap">
+                  <label class="field-label-checkbox__name">
+                    <input class="field-label-checkbox__input" type="checkbox" id name>
+                    <span class="field-label-checkbox__name-text">Payment plugins</span>
+                  </label>
+                </div>
+                <div class="field-label-checkbox__input-wrap">
+                  <label class="field-label-checkbox__name">
+                    <input class="field-label-checkbox__input" type="checkbox" id name checked>
+                    <span class="field-label-checkbox__name-text">Custom products</span>
+                  </label>
+                </div>
+                <div class="field-label-checkbox__input-wrap">
+                  <label class="field-label-checkbox__name">
+                    <input class="field-label-checkbox__input" type="checkbox" id name>
+                    <span class="field-label-checkbox__name-text">Tlayen integrated contact us and CRM</span>
+                  </label>
+                </div>
+                <div class="field-label-checkbox__input-wrap">
+                  <label class="field-label-checkbox__name">
+                    <input class="field-label-checkbox__input" type="checkbox" id name checked>
+                    <span class="field-label-checkbox__name-text">Business process improvement consultation</span>
+                  </label>
+                </div>
+                <div class="field-label-checkbox__input-wrap">
+                  <label class="field-label-checkbox__name">
+                    <input class="field-label-checkbox__input" type="checkbox" id name>
+                    <span class="field-label-checkbox__name-text">Business process improvement consultation</span>
+                  </label>
+                </div>
+                <div class="field-label-checkbox__input-wrap">
+                  <label class="field-label-checkbox__name">
+                    <input class="field-label-checkbox__input" type="checkbox" id name>
+                    <span class="field-label-checkbox__name-text">SEO for 6 months</span>
+                  </label>
+                </div>
+                <div class="field-label-checkbox__input-wrap">
+                  <label class="field-label-checkbox__name">
+                    <input class="field-label-checkbox__input" type="checkbox" id name>
+                    <span class="field-label-checkbox__name-text">+ Add your feature</span>
+                  </label>
+                </div>
+              </div>
+              <div class="fields-actions">
+                <button class="btn btn--green" type="submit">Done</button>
+              </div>
+            </form>
+          </div>
+        </section>
+        <section class="section">
+          <div class="container">
+            <h3>Send us 3 website references</h3>
+            <form class="references" action>
+              <div class="references__row">
+                <div class="references__col">
+                  <label class="field-text field-text--references">
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input" type="text" placeholder="placeholder" id name value="https://bopchristmas.nz/">
+                    </span>
+                  </label>
+                  <div class="references-viev" style="background-image: url(img/client-card-img-01.jpg);">
+                  </div>
+                </div>
+                <div class="references__col">
+                  <label class="field-text field-text--references">
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input" type="text" placeholder="placeholder" id name value="https://bopchristmas.nz/">
+                    </span>
+                  </label>
+                  <div class="references-viev" style="background-image: url(img/client-card-img-01.jpg);">
+                  </div>
+                </div>
+                <div class="references__col">
+                  <label class="field-text field-text--references">
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input" type="text" placeholder="placeholder" id name value="https://bopchristmas.nz/">
+                    </span>
+                  </label>
+                  <div class="references-viev" style="background-image: url(img/client-card-img-01.jpg);">
+                  </div>
+                </div>
+              </div>
+            </form>
+            <div class="get-started">
+              <div class="get-started__title">In the end of our requirements meeting we will
+                send you the full proposal for your acceptance</div>
+              <div class="get-started__actions">
+                <a href="#" class="btn btn--green">Let get started</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="section accordion-section">
+          <div class="container">
+            <section class="accordion-section__accordion"></section>
+              <header class="accordion-section__accordion-head">
+                <h3 class="accordion-section__accordion-heading">
+                  <button type="button" class="accordion-section__accordion-btn">FAQ Update website
+                    <span class="accordion-section__accordion-icon"></span>
+                  </button>
+                </h3>
+              </header>
+              <div class="accordion-section__accordion-panel">
+                <div class="accordion-section__accordion-content">
+                  <div class="accordion-group">
+                    <section class="accordion-group__accordion accordion-group__accordion_expanded">
+                      <header class="accordion-group__accordion-head">
+                        <h3 class="accordion-group__accordion-heading">
+                          <button type="button" class="accordion-group__accordion-btn">There are many variations of passages of Lorem Ipsum available,
+                            but the majority have suffered alteration in some form
+                            <span class="accordion-group__accordion-icon"></span>
+                          </button>
+                        </h3>
+                      </header>
+                      <div class="accordion-group__accordion-panel">
+                        <div class="accordion-group__accordion-content">
+                          <p>If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.</p>
+                          <p>If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.</p>
+                        </div>
+                      </div>
+                    </section>
+                    <section class="accordion-group__accordion">
+                      <h3 class="accordion-group__accordion-heading">
+                        <button type="button" class="accordion-group__accordion-btn">There are many variations of passages of Lorem Ipsum available,
+                          but the majority have suffered alteration in some form
+                          <span class="accordion-group__accordion-icon"></span>
+                        </button>
+                      </h3>
+                      <div class="accordion-group__accordion-panel">
+                        <div class="accordion-group__accordion-content">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                            ex ea commodo consequat. Duis aute
+                            irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                            sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                      </div>
+                    </section>
+                    <section class="accordion-group__accordion">
+                      <h3 class="accordion-group__accordion-heading">
+                        <button type="button" class="accordion-group__accordion-btn">There are many variations of passages of Lorem Ipsum available,
+                          but the majority have suffered alteration in some form
+                          <span class="accordion-group__accordion-icon"></span>
+                        </button>
+                      </h3>
+                      <div class="accordion-group__accordion-panel">
+                        <div class="accordion-group__accordion-content">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                            ex ea commodo consequat. Duis aute
+                            irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                            sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                      </div>
+                    </section>
+                    <section class="accordion-group__accordion">
+                      <h3 class="accordion-group__accordion-heading">
+                        <button type="button" class="accordion-group__accordion-btn">There are many variations of passages of Lorem Ipsum available,
+                          but the majority have suffered alteration in some form
+                          <span class="accordion-group__accordion-icon"></span>
+                        </button>
+                      </h3>
+                      <div class="accordion-group__accordion-panel">
+                        <div class="accordion-group__accordion-content">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                            ex ea commodo consequat. Duis aute
+                            irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                            sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                      </div>
+                    </section>
+                    <section class="accordion-group__accordion">
+                      <h3 class="accordion-group__accordion-heading">
+                        <button type="button" class="accordion-group__accordion-btn">There are many variations of passages of Lorem Ipsum available,
+                          but the majority have suffered alteration in some form
+                          <span class="accordion-group__accordion-icon"></span>
+                        </button>
+                      </h3>
+                      <div class="accordion-group__accordion-panel">
+                        <div class="accordion-group__accordion-content">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                            ex ea commodo consequat. Duis aute
+                            irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                            sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <div class="page__footer-wrapper">
+      <footer class="page-footer" role="contentinfo">
+        <div class="container">
+          <div class="page-footer__inner">
+            <div class="page-footer__p-left">
+              <a href="index.html" class="logo logo--footer"><img src="img/logo.svg" alt></a>
+            </div>
+            <div class="page-footer__p-right">
+              <div class="page-footer__row">
+                <div class="page-footer__col">
+                  <div class="page-footer__title">Copyright</div>
+                  <div class="page-footer__item">All rights reserved</div>
+                  <div class="page-footer__item">© 2020 Tlayen</div>
+                </div>
+                <div class="page-footer__col">
+                  <div class="page-footer__title">Location</div>
+                  <div class="page-footer__item">Tauranga</div>
+                  <div class="page-footer__item">2:42</div>
+                </div>
+                <div class="page-footer__col">
+                  <div class="page-footer__title">Contact</div>
+                  <div class="page-footer__item">info@tlayen.nz</div>
+                  <div class="page-footer__item">Behance</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <script src="js/script.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>main page</title>
+  <meta name="description" content>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <link href="https://fonts.cdnfonts.com/css/satoshi" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet" media="screen">
+  <script>
+    // Маркер работающего javascript
+    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+    document.addEventListener('DOMContentLoaded', function(){
+      if (window.isMobile !== undefined) {
+        // console.log(isMobile);
+        if(isMobile.any) {
+          var rootClasses = ' is-mobile';
+          for (key in isMobile) {
+            if(typeof isMobile[key] === 'boolean' && isMobile[key] && key !== 'any') rootClasses += ' is-mobile--'+key;
+            if(typeof isMobile[key] === 'object' && key !== 'other') {
+              for (type in isMobile[key]) {
+                if(isMobile[key][type]) rootClasses += ' is-mobile--'+key+'-'+type;
+              }
+            }
+          }
+          document.documentElement.className += rootClasses;
+        }
+      }
+      else {
+        console.log('Классы для мобильных не добавлены: в сборке отсутствует isMobile.js');
+      }
+    });
+  </script>
+<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+<link rel="manifest" href="/img/site.webmanifest">
+<link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#ffffff">
+<link rel="shortcut icon" href="/img/favicon.ico">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/img/mstile-144x144.png">
+<meta name="msapplication-config" content="/img/browserconfig.xml">
+<meta name="theme-color" content="#ffffff"></head>
+<body>
+  <div class="page__inner">
+    <div class="page__content">
+      <header class="page-header" role="banner">
+        <div class="container">
+          <div class="page-header__inner">
+            <a href="index.html" class="logo logo--header"><img src="img/logo.svg" alt></a>
+            <nav id="main-nav" class="main-nav" role="navigation">
+              <button id="main-nav-toggler" class="main-nav__toggler  burger"><span></span></button>
+              <ul class="main-nav__list">
+                <li class="main-nav__item main-nav__item--active">
+                  <a href="page-fix.html" class="main-nav__link">
+                    Fix my website
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="page-update.html" class="main-nav__link">
+                    Update my website
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="page-new.html" class="main-nav__link">
+                    New website
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <div class="intro">
+        <div class="container">
+          <h1 class="intro__title h2">Making website <span>diffrent</span> and <span>better</span></h1>
+          <p class="intro__caption">There are many variations of passages
+            of Lorem Ipsum available, but the majority
+            have suffered alteration</p>
+        </div>
+      </div>
+      <main role="main">
+        <section class="section">
+          <div class="container">
+            <div class="banner banner--big">
+              <img src="img/banner-01.jpg" alt>
+            </div>
+          </div>
+        </section>
+        <section class="section">
+          <div class="container">
+            <h3 class="text-center">How can we help you?</h3>
+            <div class="help">
+              <div class="help__row">
+                <div class="help__item">
+                  <div class="help-card">
+                    <div class="help-card__inner">
+                      <div class="help-card__title h4">Fix my website</div>
+                      <div class="help-card__caption">Website fixed they should describe their issue
+                        and we will get in contact for a proposal.</div>
+                    </div>
+                    <div class="help-card__actions">
+                      <a href="#" class="btn btn--green">Get started</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="help__item">
+                  <div class="help-card">
+                    <div class="help-card__inner">
+                      <div class="help-card__title h4">Update my website</div>
+                      <div class="help-card__caption">Requires 3 example website they like to emulate.
+                        Custom products, shop categories, payment
+                        plugins, woocommerce.</div>
+                    </div>
+                    <div class="help-card__actions">
+                      <a href="#" class="btn btn--green">Get started</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="help__item">
+                  <div class="help-card">
+                    <div class="help-card__inner">
+                      <div class="help-card__title h4">New website</div>
+                      <div class="help-card__caption">Everthing from standard service.</div>
+                    </div>
+                    <div class="help-card__actions">
+                      <a href="#" class="btn btn--green">Get started</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section section--we-do">
+          <div class="container">
+            <div class="we-do">
+              <div class="we-do__dekor"><img src="img/we-do-dekor.svg" alt></div>
+              <div class="we-do__row">
+                <div class="we-do__left">
+                  <h3 class="we-do__title">We do all the technical <br> work for you!</h3>
+                  <div class="we-do__actions"><a href="#" class="btn btn--green">Learn more</a></div>
+                </div>
+                <div class="we-do__right">
+                  <div class="we-do__image">
+                    <img src="img/we-do.jpg" alt>
+                  </div>
+                  <div class="we-do__group">
+                    <div class="we-do__item">
+                      <div class="we-do__item-icon"><svg class="icon"><use xlink:href="img/sprite-svg.svg#we-do-icon-01"/></svg></div>
+                      <div class="we-do__item-title">Experinced expert <br> advice and support</div>
+                    </div>
+                    <div class="we-do__item">
+                      <div class="we-do__item-icon"><svg class="icon"><use xlink:href="img/sprite-svg.svg#we-do-icon-02"/></svg></div>
+                      <div class="we-do__item-title">DIY</div>
+                    </div>
+                    <div class="we-do__item">
+                      <div class="we-do__item-icon"><svg class="icon"><use xlink:href="img/sprite-svg.svg#we-do-icon-03"/></svg></div>
+                      <div class="we-do__item-title">Your no.1 <br> technology team</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section section--caption">
+          <div class="container">
+            <h2 class="text-center">Global design and <br> developmen team</h2>
+            <p class="text-center">It is a long established fact that a reader will be distracted by the <br> readable content of a page when looking at its layout.</p>
+          </div>
+        </section>
+        <section class="section">
+          <div class="container">
+            <div class="stats">
+              <div class="stats__row">
+                <div class="stats__item">
+                  <div class="stats__num">+100</div>
+                  <div class="stats__caption">Project done</div>
+                </div>
+                <div class="stats__item">
+                  <div class="stats__num">47</div>
+                  <div class="stats__caption">People</div>
+                </div>
+                <div class="stats__item">
+                  <div class="stats__num">07</div>
+                  <div class="stats__caption">Countries</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section">
+          <div class="container">
+            <div class="team">
+              <div class="team__row">
+                <div class="team__item">
+                  <div class="team-card">
+                    <div class="team-card__image">
+                      <img src="img/team-card-01.jpg" alt>
+                    </div>
+                    <h5 class="team-card__title">Karl Harry</h5>
+                    <p class="team-card__caption">CEO & Founder of Tlayen</p>
+                  </div>
+                </div>
+                <div class="team__item">
+                  <div class="team-card">
+                    <div class="team-card__image">
+                      <img src="img/team-card-02.jpg" alt>
+                    </div>
+                    <h5 class="team-card__title">Kylee Beth</h5>
+                    <p class="team-card__caption">Director of Tlayen</p>
+                  </div>
+                </div>
+                <div class="team__item">
+                  <div class="team-card">
+                    <div class="team-card__image">
+                      <img src="img/team-card-03.jpg" alt>
+                    </div>
+                    <h5 class="team-card__title">Marko Janković</h5>
+                    <p class="team-card__caption">UI UX / Web / Graphic Designer CEO & Founder of Tesla Agency</p>
+                  </div>
+                </div>
+                <div class="team__item">
+                  <div class="team-card">
+                    <div class="team-card__image">
+                      <img src="img/team-card-04.jpg" alt>
+                    </div>
+                    <h5 class="team-card__title">Marko Janković</h5>
+                    <p class="team-card__caption">UI UX / Web / Graphic Designer CEO & Founder of Tesla Agency</p>
+                  </div>
+                </div>
+                <div class="team__item">
+                  <div class="team-card">
+                    <div class="team-card__image">
+                      <img src="img/team-card-05.jpg" alt>
+                    </div>
+                    <h5 class="team-card__title">Karl Harry</h5>
+                    <p class="team-card__caption">CEO & Founder of Tlayen</p>
+                  </div>
+                </div>
+                <div class="team__item">
+                  <div class="team-card">
+                    <div class="team-card__image">
+                      <img src="img/team-card-06.jpg" alt>
+                    </div>
+                    <h5 class="team-card__title">Kylee Beth</h5>
+                    <p class="team-card__caption">Director of Tlayen</p>
+                  </div>
+                </div>
+                <div class="team__item">
+                  <div class="team-card">
+                    <div class="team-card__image">
+                      <img src="img/team-card-07.jpg" alt>
+                    </div>
+                    <h5 class="team-card__title h5">Marko Janković</h5>
+                    <p class="team-card__caption">UI UX / Web / Graphic Designer CEO & Founder of Tesla Agency</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <div class="page__footer-wrapper">
+      <footer class="page-footer" role="contentinfo">
+        <div class="container">
+          <div class="page-footer__inner">
+            <div class="page-footer__p-left">
+              <a href="index.html" class="logo logo--footer"><img src="img/logo.svg" alt></a>
+            </div>
+            <div class="page-footer__p-right">
+              <div class="page-footer__row">
+                <div class="page-footer__col">
+                  <div class="page-footer__title">Copyright</div>
+                  <div class="page-footer__item">All rights reserved</div>
+                  <div class="page-footer__item">© 2020 Tlayen</div>
+                </div>
+                <div class="page-footer__col">
+                  <div class="page-footer__title">Location</div>
+                  <div class="page-footer__item">Tauranga</div>
+                  <div class="page-footer__item">2:42</div>
+                </div>
+                <div class="page-footer__col">
+                  <div class="page-footer__title">Contact</div>
+                  <div class="page-footer__item">info@tlayen.nz</div>
+                  <div class="page-footer__item">Behance</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <script src="js/script.min.js"></script>
+</body>
+</html>
