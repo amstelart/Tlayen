@@ -110,4 +110,24 @@ $border-radius:               3px !default;
       border-color: $color-main;
     }
   }
+
+  &--orange {
+    color: #222;
+    background-color: $color-orange;
+    border-color: $color-orange;
+
+    &:hover,
+    &:focus {
+      color: #222;
+      background-color: darken($color-orange, 10%);
+      border-color: darken($color-orange, 12%);
+    }
+
+    &--disabled,
+    &:disabled {
+      color: #222;
+      background-color: $color-orange;
+      border-color: $color-orange;
+    }
+  }
 }
